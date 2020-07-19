@@ -1,0 +1,87 @@
+:root {
+    --clr-primary: rgb(54, 112, 199);
+    --clr-light: #f4f4f4;
+    --clr-dark: rgb(9, 8, 20);
+    --clr-warning: rgb(99, 36, 36);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    display: grid;
+    /* grid: "header header header header" auto "...... lists  active ......" auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr; */
+  }
+  
+
+label, ul{
+    border: 1px solid #cecfd5;
+    border-radius: 6px;
+}
+label{
+    color: #0087cc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px 9px;
+    transition: all .15s ease;
+    width: 20%;
+}
+label::first-child{
+    width: 10%;
+}
+label:hover{
+    color: #ff7b29;
+}
+input:checked + label{
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+    color: #9799a7;
+}
+nav{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.15s ease;
+}
+input:checked ~ nav{
+    max-height: 500px;
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+    width: 20%;
+}
+li{
+    border-top: 1px solid #cecfd5;
+    padding: 10px;
+    /* padding-right: 20px; */
+    width: 100%;
+    /* background-color: blue; */
+}
+
+li:last-child{
+    border-bottom: 0;
+}
+a{
+    color: #0087cc;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    /* background-color: rgb(255, 0, 128); */
+
+}
+a:hover{
+    color: #ff7b29;
+} 
